@@ -1,0 +1,1920 @@
+{
+  "id": "9c65637c-4a5a-451a-8411-4f1b0d45ff1c",
+  "version": "2.0",
+  "name": "SQT_Amazon_Testing ",
+  "url": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+  "tests": [{
+    "id": "d5ad6d3d-6451-4618-b064-0207f90ea11d",
+    "name": "Measure page load time (Homepage)",
+    "commands": [{
+      "id": "52bf568b-27ad-4746-b29e-0632b5fd7555",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "6492c6e4-2f68-40b5-a107-10d84948139a",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaa1a5a5-e22f-4e00-b684-165c02511e5e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1ed6bf7-7f80-45a4-9e91-6cc647c7e93e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "3fd68a23-6a62-4a9e-a96b-19d07e145ff4",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "791e8f35-4d84-49eb-b3bf-a709cd5d119c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "4e830968-d127-4c37-8694-027f115bcd9c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "51de532f-cc02-4b4c-ae23-72256348eaa8",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1dae56a-a584-46c1-a6da-c3854775f074",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "4b9fe95b-7890-4865-b876-fa74dfa65307",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2b33910-19d3-430e-ac4f-c96a150e286c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "7491e0a1-bb18-4143-88cf-9d7adedd67c5",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "612fd3c7-ece2-4aca-ab89-5d048bc3a3a7",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "405fa875-ee37-404e-94f7-855fd416097d",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d76641f-a5bb-4c6d-a3b1-c00817ebf664",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff9a0ab7-57c5-4e85-949c-f201b6701677",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17baf777-521a-4400-b768-b4a21bbcbcb4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63d223c4-cddc-4a1f-a973-9e36477523ed",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d02297b0-7617-40a0-9f6b-6eb24fc127b4",
+    "name": "Measure page load time (Today's Deals)",
+    "commands": [{
+      "id": "9bb0885a-eb66-4fd9-8fb3-47ad369ab15c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "c4ee93a1-9a1a-4e7a-961e-f0a6312ee5fb",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "969fcae4-2a5d-4a5a-9130-ce32c633d9af",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9926fb7-1812-449d-88ac-6b1bcbed750b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "dc65397f-c9b7-44d3-bc48-4610fa341a28",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "44f52af8-b1f1-442a-ac71-47305038ac4e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "2a2d0d31-03ce-44f3-8aeb-664bcd33d1cb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "2632a88d-3071-4c73-b2ad-6de7d453b96a",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d112086-d51b-401e-8a80-a217f2387255",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "054167f6-182d-4cd4-b5eb-cdb3e7be53f0",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69047c58-5484-4f7c-a228-87f33b754f93",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "19fa6c65-90ab-434f-ad20-1b1c20f85107",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe944387-6210-49a1-b47c-5a552c371186",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4eabb28b-ae7e-4912-b591-4fab94c0a45c",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74b63018-804b-4e40-894c-b5fa342160be",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30679c10-58c6-47db-8669-ddfcabcd0d53",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ea95b44-67d6-4d37-a184-0e4af58a633c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b35570c-9df6-478b-84cd-05f34e28f0e0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fa65f3bb-d169-4154-8a79-7b4ec95c10b0",
+    "name": "Measure page load time (Buy Again) ",
+    "commands": [{
+      "id": "60531cc9-759f-42a0-a3bd-88a36980d4ca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "8471afe2-7ac0-4732-9240-19b3f8124253",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "740294a8-7813-4a4d-b8a3-c3b25ff1fd48",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/buyagain?ie=UTF8&ref_=nav_cs_buy_again",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d8f4901-0456-4051-a615-2d270385fe9b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "44fecb51-ee9f-4bca-b251-be291064fe66",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "6d5688be-666b-40ea-b517-452b085e2f58",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "4ddbc5f6-6429-435b-b370-e009ffb765a7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "d24ce58b-1bbc-4bd5-a5de-bc507fbb5286",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf427e71-c91f-4370-ba09-943547eefc74",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "40e7f2af-a70b-4874-a03e-023afcbcf53e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00206185-04ea-4342-83d5-6e9bdc77cafa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "34ee2840-9461-4383-941f-db1cf6e1a9ad",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b35666c-5fb9-4183-b548-c29aabaf30c5",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c11775a2-80b5-4159-8dce-30e695bb06f1",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "921af94e-1761-4649-9cb4-2466e101e5bc",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "241505c2-f170-429d-93ab-b5fff4bef44f",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c051b73-2e03-4f29-acc8-ef6dd3f54167",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e8f557b-cbf3-48a3-9634-d3fe9188b793",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dd74d057-0cfa-4833-8700-b77d4d136d5f",
+    "name": "Measure page load time (Registry)",
+    "commands": [{
+      "id": "c4d2c700-066d-4b43-873a-4a3b8dee9fae",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "d5cc7e76-28c7-4f9f-9367-950044a96141",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16d312e1-c040-4de3-929a-b52f98046bf7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/registries?ref_=nav_cs_registry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e80f3106-a633-4015-a954-fd66449f3631",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "71024976-e7a2-44fb-bbc8-5600a29e91e4",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "5aa3fa56-a952-4802-83bf-2454a2fe24ce",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "57f3bda5-169c-4c70-b298-f5aaec8e9d87",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "9c10b630-bf3f-4861-bb57-8d518298bc7d",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1180352-f466-4530-a1dd-7b3db675b429",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "6e7879dd-eab5-4b5f-847a-7b2ba93acb53",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c75df7a2-aefd-45dc-b0c4-c58f1f97d57a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "35108566-02b3-49c0-b967-005574181cd4",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ba97f64-0a99-4b15-8850-fdef156da04a",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "136cabf3-1f4e-4af5-aa52-c829e81047f7",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa8adfff-933d-4a0a-8da4-eeb2646c4eea",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa2e0009-c5a8-4361-9fae-adef39b9fd08",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53cd044e-8743-4ab0-8910-7e237b5355a4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec7e7f07-7d35-47cb-8b4a-392ea02213bd",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9310dd60-5b32-40b9-bd97-124680da20da",
+    "name": "Measure page load time (Gift Cards)",
+    "commands": [{
+      "id": "ca8b2291-f7a5-4862-862d-ba69aeee5322",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "5f0f2276-4f7e-4835-b0a4-a8b235ea1aff",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6677908-ac95-4e53-8cc9-37e6147ba360",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aeeac71-8749-4223-9e40-d216ed8c7a34",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "424c5de8-9a82-4dc0-815a-a628b2dacd26",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "59d2253d-2b9d-4016-8a7d-14b3c61b3fc1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "626ae340-8444-4691-ad27-089067a3e28b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "f46fa49a-632e-4b49-abfc-202c54c403f2",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "818dbea6-7197-459a-a0ab-9da230734896",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "80d0138c-c459-4ab0-923a-5da07e513f59",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edd417b6-8ddf-420c-887a-c2f12f742e80",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "ae10f2e8-2f94-4e2d-acaf-e23832887eb7",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3bb81c4-4298-47ad-a1e4-7faff37b91f1",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94610c5e-3845-4d8e-934e-01ccfb7dea3d",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93866151-7e78-4ce4-b745-cab26f60448e",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99ba2ece-bd38-4229-8b1c-fca8add9e6f4",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "383a5ff5-18e7-40ad-b46a-846aeaf33b83",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53172207-83c2-4687-9838-476710e5db5b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7545c06b-b976-4bc8-81e9-1f3f37916f04",
+    "name": "Measure page load time (Sell)",
+    "commands": [{
+      "id": "3a1b8dc0-daa1-4c07-b0a5-20095618a950",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "5a6012c7-4f31-4642-8f9d-8f2e1e78a6e0",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "baa412aa-83e0-449c-98dd-f8fd6f096227",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b781f7a9-c920-4053-b1a9-4a2d44bf2d66",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "9cf8a5ad-bf5c-4941-b21a-30050402befa",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "c4264545-94b6-4cf1-b206-e63d81e44fd9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "24b92f3d-ff39-43f9-a6a7-5673333b3fec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "22843f0c-d8a2-488a-8870-c90a5b82ce22",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7e68a99-0945-4e1c-94d1-10145174adce",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "346854e2-f0e8-4c5a-9d4f-b817171da726",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e51a1885-3832-46cd-af53-d8dccf2434a8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "b9a1bac2-680f-4a9b-9bdc-1c24fb679096",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd773f42-041c-4e4d-8acb-19e1010d53e1",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4d2ad2c-5377-4782-afed-e74d48e1ef85",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1437bb4c-b832-43e0-9f02-a333e48e4a52",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90cabc97-0a93-4794-9e46-d076174b9a6e",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3234a505-35f7-4e69-a9ba-23c183e9b053",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bc55c3b-f178-4667-b6be-1991b7620c10",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2277922f-435e-4500-bc82-ad2f353bccc3",
+    "name": "Measure page load time (Login page)",
+    "commands": [{
+      "id": "d1473d79-a5a3-4651-ac38-7085bd848766",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "027bebd3-53d4-4031-9f16-297dffb39ac0",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c6b71c0-845d-44af-87eb-e780d831d8ce",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bd9f8f1-d7a6-4a14-9a15-9ec67a72702d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "ec76b521-9140-496f-b9e7-4cb41f8d5b82",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=authportal-main-section",
+      "targets": [
+        ["id=authportal-main-section", "id"],
+        ["css=#authportal-main-section", "css:finder"],
+        ["xpath=//div[@id='authportal-main-section']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-center-section']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "f9c306d3-4020-4468-b32d-8d25c08f256d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "19c43ec4-16a9-4609-ac8e-4ecda0e623ba",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "fcf96a96-8181-41cb-ad28-bb3792ce8c9e",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac535055-edc9-4b12-99dd-6e01b2de60b6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "f1b987b9-8d78-402e-a8c0-a33678b4e362",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79143f28-ffd7-4c7f-afcd-ac3fdd5f08a5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "91b6599e-a989-4ffa-a56c-212d87de85ea",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c72455ad-dce3-4d40-84d6-a5c94fd7d0c9",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f029111-6da5-4364-bf81-ce9cb06f3642",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0f1ab28-3e12-4821-b45e-5ecca0407d67",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32fb291d-7e0f-4419-b10f-1cbacdc6277e",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7701d02a-bce7-47a1-9914-80276e023671",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f54275fe-8aaa-434e-a18b-34618cf85379",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fd91981c-401d-48f3-986e-0790ce6bddfb",
+    "name": "Measure page load time (Registration)",
+    "commands": [{
+      "id": "024f5df1-1505-4176-88d2-e57048633d74",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "e00eb2c3-7c34-42bd-af60-9c40aac63e8c",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d1e0425-71d9-48b9-a511-31574cc0e3af",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/ap/register?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&mobileBrowserWeblabTreatment=C&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Dnav_ya_signin&prevRID=A6SPSR3E0J3JN22SVF6S&openid.assoc_handle=usflex&openid.mode=checkid_setup&desktopBrowserWeblabTreatment=C&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5aa6a87a-1579-41fb-93bd-3194aaa9e66d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "5084214c-665c-468b-acb2-01ea79068efe",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=authportal-main-section",
+      "targets": [
+        ["id=authportal-main-section", "id"],
+        ["css=#authportal-main-section", "css:finder"],
+        ["xpath=//div[@id='authportal-main-section']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-center-section']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "a0bc57f4-a112-443f-ac1e-00749fa59cca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "a4c8bc14-40b8-41cd-9095-1d73fd780baf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "6f53dc0d-e36c-428b-84d6-25c0b6226b7d",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aaa24e1a-04ec-46fc-82de-65e3e51c1a7f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "9f7720f6-f3f1-4a22-a132-0dbf37be0436",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eb0995d-9123-4756-8ff1-d3bfa3254103",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "f2838988-56b4-4f2a-8d95-258c8671c241",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0788673b-1c0f-4295-9293-907e5d676d3f",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6acc7e8-9954-4c8b-a92f-c61ae52f77c7",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8842d207-1ede-4573-a8b9-ada548d1713a",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e431e6c-bc6d-42e1-8d8d-29e58862dac7",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f12af1b-7a85-43e4-87c3-a15242731f7e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9525f890-2913-48e2-a048-65a8740d0c0c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e4124476-3323-4914-b315-c8bc74a895ef",
+    "name": "Measure page load time (Product page)",
+    "commands": [{
+      "id": "37db05d1-58b9-46fa-9557-8930b2917765",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "6641192b-4bf9-4019-870b-af92aae06d94",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e2de38c-569d-476e-a1d5-073ec09e8fdd",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/Corsair-Leatherette-SonarWorks-Multi-Platform-Compatibility/dp/B09YHQ3Y61/ref=sr_1_1_sspa?keywords=gaming%2Bheadsets&pd_rd_r=2493746c-c8f4-49c1-bce4-b4fed10c64d7&pd_rd_w=VGQC9&pd_rd_wg=bIGBI&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=D4FNPR94XNEDGFQC0E4E&qid=1684181584&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyWUs5MTRIRFFNQVA1JmVuY3J5cHRlZElkPUEwMDg4NzA2UExaUE1EVEVCUk5OJmVuY3J5cHRlZEFkSWQ9QTAzODM2MjEyUTg3UUJXSlRBVVpEJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8268c6e-5ec4-430f-8305-88e433b755bf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "e77a4e1e-ae9a-44e9-a827-c7c897d3e2ff",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "2ef74171-5f2d-46f7-beaf-f74c55e413ab",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "984b7b06-f224-43ce-bfe5-837ff66c528e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "cfacb30f-1031-4765-8cd1-2d8db540e46f",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aaa1164-641d-4960-ae90-d35ae832cc25",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "2c24694a-4920-439e-90e6-b051493ada27",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94e6f6e3-1b4b-4a40-82d8-7d40843b0617",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "d0a41d5b-1935-4626-9794-c2ab4dbb4b20",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64449547-5071-41ac-bf12-7209e1ea635b",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66ffb2f1-1a30-4715-818f-ea066d3d644d",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c791f5f-96cf-4fe4-94ba-4dd57c5bd126",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4648c39e-76e0-4570-bb9b-c86964d9a2b2",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1c9f01-4a5f-4b36-a92f-91776ef64200",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0164a68-9605-4ddd-ba7f-b7720f37ec33",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8d2bea02-891d-44f2-832b-3cc50be7b8dc",
+    "name": "Measure page load time (cart)",
+    "commands": [{
+      "id": "ce0ab72a-e2fd-461f-a691-de5e5ed3b815",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "8d7696f1-de05-4c51-9b99-5b1dec8216c0",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "603c9a73-860b-4b6a-bd02-1b3cee46dc6c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/cart/view.html?ref_=nav_cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0679d796-ba5d-46d4-8cbb-13130e3b6597",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "startTime"
+    }, {
+      "id": "5edf1b8f-0c1a-4f25-b64c-ad5e31f0c8da",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=nav-xshop",
+      "targets": [
+        ["id=nav-xshop", "id"],
+        ["css=#nav-xshop", "css:finder"],
+        ["xpath=//div[@id='nav-xshop']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-xshop-container']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "11fed52f-6f24-4590-8015-8468a721f60e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return new Date().getTime()",
+      "targets": [],
+      "value": "endTime"
+    }, {
+      "id": "bd62e813-bb0c-4c1f-8878-5cb694cae96b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${endTime}-${startTime}",
+      "targets": [],
+      "value": "loadTime"
+    }, {
+      "id": "9150d559-8fa2-4497-92ca-91df2b1b6acd",
+      "comment": "",
+      "command": "echo",
+      "target": "Page load time: ${loadTime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e0d38c7-ba6e-442a-91fb-a048388547ec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}+${loadTime}",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "bdd6c4e7-22b8-4a9d-8fc3-44b4b2e013c6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a727a0ef-9b19-4de9-b35b-aa271f706724",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${avgLoadtime}/10",
+      "targets": [],
+      "value": "avgLoadtime"
+    }, {
+      "id": "bc4bf0ed-d862-4c99-85c0-d5903c56e5d6",
+      "comment": "",
+      "command": "echo",
+      "target": "Average Page load time: ${avgLoadtime} ms",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99c5357e-4102-4889-92ff-52378c48d267",
+      "comment": "",
+      "command": "if",
+      "target": "${avgLoadtime} < 3001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7294dbc2-76f6-4eac-b537-9e03767c6458",
+      "comment": "",
+      "command": "echo",
+      "target": "Good Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c425baba-252d-4762-aa64-422cb893b608",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06dc75bd-b874-4317-9af1-f876438a4230",
+      "comment": "",
+      "command": "echo",
+      "target": "Bad Load Time",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cfaf750-f181-43df-84f9-649eeb057feb",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e5620e0-5bf3-48cb-9404-d50308c99efb",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7d2e9c96-3bbe-4dcd-9ca3-b72f95e700a4",
+    "name": "page access check (Return & Order)",
+    "commands": [{
+      "id": "df10e649-cb61-441c-a754-76f120d59673",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bebc7012-1bef-4039-9b5a-57de9bb5f948",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bb2218f-2dca-4027-b38b-3bf4f79e4279",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-orders > .nav-line-2",
+      "targets": [
+        ["css=#nav-orders > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[3]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'& Orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56409525-1e37-4559-b209-ad94a0cc29ca",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08a9d361-eb87-42e6-92aa-3f36b1a62b23",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b965560e-a569-45c4-a0bc-a23b3bc8d590",
+    "name": "page access check (Login and Security)",
+    "commands": [{
+      "id": "2447cc34-3f6d-482c-b554-99d018c9095f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "102cafd7-4b81-48ec-a11c-a775aac41ea3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c698d382-9ca0-414d-9c39-b0ebc1fda981",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c26a5a21-5686-4f6e-9440-69a4ca0e7d07",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ba95473-2e8f-430e-be48-a806394e88e4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0fe2de90-51f9-42d5-b8fd-e73e1d7c1a1b",
+    "name": "page access check (prime)",
+    "commands": [{
+      "id": "e90fe545-f65e-4002-b975-684417c7c59c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30b98659-18fb-434a-a981-b0df604683a1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6304f394-a1ce-4dcc-a044-9431db6d88fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(3) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e33bd86c-fcac-4c2e-9ed4-b9aa3a27ef21",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c7324c5-29ef-42fa-85ba-5a736a7767c2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6e9421c0-0150-42af-98ae-93475b91f038",
+    "name": "page access check (your address)",
+    "commands": [{
+      "id": "46acc897-cfe7-4b52-821e-4a1e4e65af46",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a9e1888-1e03-4ca8-a0ac-831c8286dde0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94bd61d1-d2cf-4560-be5f-a90551f24fdb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(3) > .ya-card-cell:nth-child(1) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e51d93bb-cfa6-42f2-bd8f-c24186cfbdae",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d487475a-9ddf-42bd-a4a4-7e349205344c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a0b09a06-4ed2-4daa-8297-08f37ab5dec6",
+    "name": "page access check (Gift cards)",
+    "commands": [{
+      "id": "5272b5ce-5f54-4c51-9cac-a6d49dd33a19",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9488aaf3-a149-4848-994d-78f1d30b1127",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee7acd07-bbcb-4281-ba0c-f56f971282fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(3) > .ya-card-cell:nth-child(2) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10804290-7b27-45b0-8b94-8fb04c839e8d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-spacing-small:nth-child(1)",
+      "targets": [
+        ["css=.a-spacing-small:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b66bb5b6-50fb-4900-98bf-3ea41cbfd334",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2549c66e-f33a-451e-ab3b-8b1c778eee31",
+    "name": "page access check (your payment)",
+    "commands": [{
+      "id": "679eaa60-2ccf-4537-a955-6b872a2fce05",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3131fc4-8f38-455d-b098-a1bf872bf4a9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61e15182-a141-4995-b38e-d055be0ecd5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(3) > .ya-card-cell:nth-child(3) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ede25ae2-88d1-4768-b628-516241bdee24",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86650408-2baf-4129-91a3-13dc21267a88",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "17f79bb9-7312-4530-921c-a438333a2f10",
+    "name": "page access check (your profile)",
+    "commands": [{
+      "id": "cded0614-4472-4b57-8cfd-b40f6c60c168",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b712983-122a-4376-abd3-0aac2f96a2d0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "944c6b6d-5ea3-4866-a785-9ca9ba98d038",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(4) > .ya-card-cell:nth-child(1) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fe59fec-735a-4cb8-8a84-ffe462a58d09",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54bcf85b-0138-4d64-9fdb-10d3f3af6fd3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fb2a071e-31f5-4aa2-824f-f48ef48afd8c",
+    "name": "page access check (archive Order)",
+    "commands": [{
+      "id": "7ceb0138-9df0-475a-ba3f-f9b95b10a36b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b15c5fed-7d9d-441a-9258-9fafaecffdbc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cccf2e8-3d1d-4d37-bcf5-39f1d8272081",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(4) > .ya-card-cell:nth-child(3) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a8d30a2-a46e-4c14-97b2-4c3f6c00e15b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3720bc3e-d803-4707-a067-a80062449a96",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "88241fe3-d3e5-418b-b584-ca075e574234",
+    "name": "page access check (your messages)",
+    "commands": [{
+      "id": "03c31584-5b52-4cab-ae7c-e417a4e7488c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c54313d1-15fd-47b1-9d25-db28adbf9ee6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d8a0564-de01-4f41-a321-cc07bc77e00f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ya-card-row:nth-child(5) > .ya-card-cell:nth-child(3) .a-spacing-none",
+      "targets": [
+        ["css=.ya-card-row:nth-child(2) > .ya-card-cell:nth-child(2) .a-spacing-none", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]/div/div[2]/div[2]/a/div/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div/div/div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login & security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a782f3a-7f1d-42df-a7de-0c27d5ea5a59",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3eb72e9-5310-4537-8e87-01322da65685",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2dc060ed-934b-458c-9174-ccc09f93820c",
+    "name": "page access check (watchlist)",
+    "commands": [{
+      "id": "ac66c067-033d-4a9e-a24f-903277520cf5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbc5e3ed-62c2-4d7f-99d8-77439afa03f4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#nav-flyout-ya-signin .nav-action-inner",
+      "targets": [
+        ["css=#nav-flyout-ya-signin .nav-action-inner", "css:finder"],
+        ["xpath=//div[@id='nav-flyout-ya-signin']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ae618ee-52e4-46fe-8658-acede49e361b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-link:nth-child(6) > .nav-text",
+      "targets": [
+        ["css=.nav-link:nth-child(6) > .nav-text", "css:finder"],
+        ["xpath=//div[@id='nav-al-your-account']/a[5]/span", "xpath:idRelative"],
+        ["xpath=//a[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Watchlist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53ef8b9f-7d37-436d-8921-ccd17280f5be",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.a-padding-medium",
+      "targets": [
+        ["css=.a-padding-medium", "css:finder"],
+        ["xpath=//div[@id='a-page']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "635aaafb-dfd4-4a95-b0f3-9f502d57eb4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-link:nth-child(6) > .nav-text",
+      "targets": [
+        ["css=.nav-link:nth-child(6) > .nav-text", "css:finder"],
+        ["xpath=//div[@id='nav-al-your-account']/a[5]/span", "xpath:idRelative"],
+        ["xpath=//a[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Watchlist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f46c5283-3cd5-4dd5-ad57-129274a7240a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "38dbdfbd-f9f0-41a7-b2bd-4145671e9930",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d5ad6d3d-6451-4618-b064-0207f90ea11d"]
+  }],
+  "urls": ["https://www.amazon.com/", "https://www.amazon.com/gp/css/homepage.html?ref_=nav_AccountFlyout_ya"],
+  "plugins": []
+}
